@@ -6,14 +6,15 @@ import java.util.Base64;
 
 class TestOpenALPR {
 
-    public static void main(String[] args)
+    public static void main(int argc, char argv[], String[] args)
     {
         try
         {
-            String secret_key = "sk_DEMODEMODEMODEMODEMODEMO";
+            String secret_key = "sk_aeaf16bdbe49c343c5404ae2";
 
             // Read image file to byte array
-            Path path = Paths.get("/storage/projects/alpr/samples/testing/car1.jpg");
+            Path path = Paths.get(argv[1]);
+            // image file location : need to be revised
             byte[] data = Files.readAllBytes(path);
 
             // Encode file bytes to base64
