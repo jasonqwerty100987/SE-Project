@@ -17,7 +17,7 @@ class ALPR {
 			String secret_key = "sk_81d57d1165a4240f24b7cdfb";
 
 			// Read image file to byte array
-			Path path = Paths.get("/Users/shijiexu/Desktop/IMG_2825.jpeg");
+			Path path = Paths.get("/Users/shijiexu/Desktop/car.jpeg");
 			// image file location : need to be revised
 			byte[] data = Files.readAllBytes(path);
 
@@ -114,6 +114,7 @@ class ALPR {
 			JSONObject obj = color.getJSONObject(i);
 			color_str= obj.getString("name");
 		}
+		color_str = color_str.replace('-', ' ');
 		return color_str;
 	}
 	
@@ -148,6 +149,7 @@ class ALPR {
 			JSONObject obj = body_type.getJSONObject(i);
 			body_type_str= obj.getString("name");
 		}
+		body_type_str = body_type_str.replace('-', ' ');
 		return body_type_str;
 	}
 	
@@ -182,6 +184,8 @@ class ALPR {
 			JSONObject obj = make_model.getJSONObject(i);
 			make_model_str= obj.getString("name");
 		}
+		make_model_str = make_model_str.replace('-', ' ');
+		make_model_str = make_model_str.replace('_', ' ');
 		return make_model_str;
 	}
 }
