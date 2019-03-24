@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component inheritJdk="true">
+<component jdk="10" jdk_type="JavaSDK">
 	<exclude-output/>
 	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="commons-beanutils-1.7.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/commons-beanutils-1.7.0.jar!/"/>
+	</lib>
+	<lib name="commons-collections-3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/commons-collections-3.1.jar!/"/>
+	</lib>
+	<lib name="commons-lang-2.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/commons-lang-2.5.jar!/"/>
+	</lib>
+	<lib name="commons-logging.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/commons-logging.jar!/"/>
+	</lib>
+	<lib name="ezmorph-1.0.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/ezmorph-1.0.3.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.2.56.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/fastjson-1.2.56.jar!/"/>
+	</lib>
+	<lib name="java-json.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/libs/java-json.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/libs/java-json.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/java-json.jar!/"/>
+	</lib>
+	<lib name="json-lib-2.1-jdk15.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/libs/json-lib-2.1-jdk15.jar!/"/>
+	</lib>
 </component>
