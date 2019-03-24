@@ -91,22 +91,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="86" column="113" selection-start-line="86" selection-start-column="113" selection-end-line="86" selection-end-column="113" />
+            <state relative-caret-position="3230">
+              <caret line="387" column="53" lean-forward="true" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
+                <element signature="class#cars#0;class#Controller#0" />
+                <element signature="e#2002#2003#0" expanded="true" />
+                <element signature="e#2040#2041#0" expanded="true" />
+                <element signature="method#sha256#0;class#Controller#0" />
+                <element signature="method#handleButtonClick#0;class#Controller#0" />
+                <element signature="method#validateInfo#0;class#Controller#0" />
+                <element signature="method#timeFormate#0;class#Controller#0" />
+                <element signature="e#9936#10104#1" />
+                <element signature="method#format#0;class#Controller#0" />
+                <element signature="method#timeDuration#0;class#Controller#0" />
+                <element signature="method#RefreshList#0;class#Controller#0" />
+                <element signature="method#getPlate#0;class#Controller#0" />
+                <element signature="method#getRegion#0;class#Controller#0" />
+                <element signature="method#getColor#0;class#Controller#0" />
+                <element signature="method#getYear#0;class#Controller#0" />
+                <element signature="method#getBodyType#0;class#Controller#0" />
+                <element signature="method#getMake#0;class#Controller#0" />
+                <element signature="method#getMakeModel#0;class#Controller#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/AlertBox.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -115,13 +122,30 @@
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="195" selection-start-line="25" selection-start-column="183" selection-end-line="25" selection-end-column="195" />
+            <state relative-caret-position="150">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>refre</find>
+      <find>butti</find>
+      <find>leftSta</find>
+    </findStrings>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -131,17 +155,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/AlertBox.java" />
+        <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
+        <option value="$PROJECT_DIR$/src/sample/main.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
-    <option name="width" value="787" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="337" />
+    <option name="y" value="177" />
+    <option name="width" value="801" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectReloadState">
@@ -152,7 +178,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,6 +205,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -193,9 +219,9 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553374048646" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553461016524" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SE project/mysql-connector-java-8.0.15.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar!/" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -298,18 +324,18 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1553305790937" duration="5111000" />
-      <workItem from="1553369945232" duration="3858000" />
+      <workItem from="1553369945232" duration="16185000" />
+      <workItem from="1553436646075" duration="22185000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10271000" />
+    <option name="totallyTimeSpent" value="44783000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="337" y="177" width="801" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.43283582" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.5330634" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -318,7 +344,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26435536" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26367614" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -333,18 +359,18 @@
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
       <window_info anchor="bottom" id="Terminal" order="16" />
-      <window_info anchor="right" id="Google Cloud Storage" weight="0.32932165" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="JetGradle" order="3" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.16044776" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32932165" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Maven" order="7" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
+      <window_info anchor="right" id="Google Cloud Storage" order="11" weight="0.32932165" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,18 +388,18 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/291abee4-5fdb-4c08-b436-c2d125c9a593/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/sample/SocketFactory.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/AlertBox.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="195" selection-start-line="25" selection-start-column="183" selection-end-line="25" selection-end-column="195" />
+        <state relative-caret-position="266">
+          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/SocketFactory.java">
+    <entry file="jar://$PROJECT_DIR$/../javaJDK/lib/src.zip!/javafx.base/javafx/beans/value/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-209">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="428">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -387,21 +413,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/AlertBox.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
+        <state relative-caret-position="62">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="86" column="113" selection-start-line="86" selection-start-column="113" selection-end-line="86" selection-end-column="113" />
+        <state relative-caret-position="3230">
+          <caret line="387" column="53" lean-forward="true" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1265#1266#0" expanded="true" />
-            <element signature="e#1320#1321#0" expanded="true" />
+            <element signature="class#cars#0;class#Controller#0" />
+            <element signature="e#2002#2003#0" expanded="true" />
+            <element signature="e#2040#2041#0" expanded="true" />
+            <element signature="method#sha256#0;class#Controller#0" />
+            <element signature="method#handleButtonClick#0;class#Controller#0" />
+            <element signature="method#validateInfo#0;class#Controller#0" />
+            <element signature="method#timeFormate#0;class#Controller#0" />
+            <element signature="e#9936#10104#1" />
+            <element signature="method#format#0;class#Controller#0" />
+            <element signature="method#timeDuration#0;class#Controller#0" />
+            <element signature="method#RefreshList#0;class#Controller#0" />
+            <element signature="method#getPlate#0;class#Controller#0" />
+            <element signature="method#getRegion#0;class#Controller#0" />
+            <element signature="method#getColor#0;class#Controller#0" />
+            <element signature="method#getYear#0;class#Controller#0" />
+            <element signature="method#getBodyType#0;class#Controller#0" />
+            <element signature="method#getMake#0;class#Controller#0" />
+            <element signature="method#getMakeModel#0;class#Controller#0" />
           </folding>
         </state>
       </provider>

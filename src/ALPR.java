@@ -14,10 +14,10 @@ class ALPR {
 	{
 		try
 		{
-			String secret_key = "sk_81d57d1165a4240f24b7cdfb";
+			String secret_key = "sk_aeaf16bdbe49c343c5404ae2";
 
 			// Read image file to byte array
-			Path path = Paths.get("/Users/shijiexu/Desktop/IMG_2825.jpeg");
+			Path path = Paths.get("C:\\Users\\90381\\Desktop\\上课\\PM II\\GitHub\\SE-Project\\src\\5.jpg");
 			// image file location : need to be revised
 			byte[] data = Files.readAllBytes(path);
 
