@@ -1,0 +1,28 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SE_Project_Software:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SE_Project_Software_jar</output-path>
+    <root id="archive" name="SE_Project_Software.jar">
+      <element id="module-output" name="SE_Project_Software" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfoenix-9.0.8.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-collections-3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ezmorph-1.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-logging.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/fastjson-1.2.56.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/java-json.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json-lib-2.1-jdk15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-beanutils-1.7.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-lang-2.5.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-beanutils-1.7.0.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-collections-3.1.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-lang-2.5.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/commons-logging.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/ezmorph-1.0.3.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/fastjson-1.2.56.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/java-json.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/jfoenix-9.0.8.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/json-lib-2.1-jdk15.jar" />
+      <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar" />
+    </root>
+  </artifact>
+</component>

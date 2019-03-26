@@ -9,8 +9,19 @@ import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
+    private static Stage primaryStage;
+
+    public static Stage getPrimaryStage() {
+        return primaryStage;
+    }
+
+    public static void setPrimaryStage(Stage primaryStage) {
+        Main.primaryStage = primaryStage;
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+        setPrimaryStage(primaryStage);
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Inspire Manage System");
         primaryStage.setScene(new Scene(root));

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SE_Project_Software:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
@@ -79,10 +84,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="437">
+              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#360#361#0" expanded="true" />
+                <element signature="e#422#423#0" expanded="true" />
+                <element signature="e#470#471#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,18 +100,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3230">
-              <caret line="387" column="53" lean-forward="true" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
+            <state relative-caret-position="579">
+              <caret line="556" column="37" selection-start-line="556" selection-start-column="37" selection-end-line="556" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#cars#0;class#Controller#0" />
-                <element signature="e#2002#2003#0" expanded="true" />
-                <element signature="e#2040#2041#0" expanded="true" />
                 <element signature="method#sha256#0;class#Controller#0" />
                 <element signature="method#handleButtonClick#0;class#Controller#0" />
                 <element signature="method#validateInfo#0;class#Controller#0" />
+                <element signature="method#refresh_list#0;class#Controller#0" />
+                <element signature="method#addCar#0;class#Controller#0" />
+                <element signature="method#deleteCar#0;class#Controller#0" />
+                <element signature="method#changeCar#0;class#Controller#0" />
+                <element signature="method#changeKey#0;class#Controller#0" />
+                <element signature="method#changeKeyNow#0;class#Controller#0" />
+                <element signature="method#deleteNow#0;class#Controller#0" />
+                <element signature="method#useCurrentTime#0;class#Controller#0" />
+                <element signature="method#changeNowInfo#0;class#Controller#0" />
+                <element signature="method#addNowFunction#0;class#Controller#0" />
+                <element signature="method#About#0;class#Controller#0" />
                 <element signature="method#timeFormate#0;class#Controller#0" />
-                <element signature="e#9936#10104#1" />
                 <element signature="method#format#0;class#Controller#0" />
                 <element signature="method#timeDuration#0;class#Controller#0" />
                 <element signature="method#RefreshList#0;class#Controller#0" />
@@ -119,32 +136,30 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
+        <entry file="file://$PROJECT_DIR$/src/sample/changeCar.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+            <state relative-caret-position="342">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/main.fxml">
           <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="53" column="51" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="51" />
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>refre</find>
       <find>butti</find>
       <find>leftSta</find>
+      <find>Main</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -157,14 +172,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/sample/AlertBox.java" />
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/main.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Resources/addCar.java" />
+        <option value="$PROJECT_DIR$/src/sample/addCar.java" />
+        <option value="$PROJECT_DIR$/src/sample/addcar.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/changeCar.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/deleteNow.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/changeKey.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="337" />
     <option name="y" value="177" />
     <option name="width" value="801" />
@@ -198,6 +219,13 @@
             </path>
             <path>
               <item name="SE_Project_Software" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SE_Project_Software" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SE_Project_Software" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -219,11 +247,11 @@
     <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553461016524" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553586543752" />
     <property name="dynamic.classpath" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.14160156" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
   </component>
@@ -326,16 +354,17 @@
       <workItem from="1553305790937" duration="5111000" />
       <workItem from="1553369945232" duration="16185000" />
       <workItem from="1553436646075" duration="22185000" />
+      <workItem from="1553566857256" duration="18423000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44783000" />
+    <option name="totallyTimeSpent" value="63206000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="337" y="177" width="801" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.5330634" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" weight="0.9671773" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -344,7 +373,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26367614" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26327193" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -389,13 +418,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/SocketFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/sample/AlertBox.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="53" lean-forward="true" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../javaJDK/lib/src.zip!/javafx.base/javafx/beans/value/ChangeListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="428">
@@ -403,46 +425,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Resources/addCar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/AlertBox.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="40" selection-end-line="24" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/main.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/sample/addCar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="53" column="51" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="51" />
+        <state relative-caret-position="57">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/sample/addcar.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+        <state relative-caret-position="437">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="40" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/main.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="75" column="50" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="50" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/changeKey.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="16" column="97" lean-forward="true" selection-start-line="16" selection-start-column="97" selection-end-line="16" selection-end-column="97" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/deleteNow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+            <element signature="e#470#471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/changeCar.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="18" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3230">
-          <caret line="387" column="53" lean-forward="true" selection-start-line="387" selection-start-column="53" selection-end-line="387" selection-end-column="53" />
+        <state relative-caret-position="579">
+          <caret line="556" column="37" selection-start-line="556" selection-start-column="37" selection-end-line="556" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="class#cars#0;class#Controller#0" />
-            <element signature="e#2002#2003#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
             <element signature="method#sha256#0;class#Controller#0" />
             <element signature="method#handleButtonClick#0;class#Controller#0" />
             <element signature="method#validateInfo#0;class#Controller#0" />
+            <element signature="method#refresh_list#0;class#Controller#0" />
+            <element signature="method#addCar#0;class#Controller#0" />
+            <element signature="method#deleteCar#0;class#Controller#0" />
+            <element signature="method#changeCar#0;class#Controller#0" />
+            <element signature="method#changeKey#0;class#Controller#0" />
+            <element signature="method#changeKeyNow#0;class#Controller#0" />
+            <element signature="method#deleteNow#0;class#Controller#0" />
+            <element signature="method#useCurrentTime#0;class#Controller#0" />
+            <element signature="method#changeNowInfo#0;class#Controller#0" />
+            <element signature="method#addNowFunction#0;class#Controller#0" />
+            <element signature="method#About#0;class#Controller#0" />
             <element signature="method#timeFormate#0;class#Controller#0" />
-            <element signature="e#9936#10104#1" />
             <element signature="method#format#0;class#Controller#0" />
             <element signature="method#timeDuration#0;class#Controller#0" />
             <element signature="method#RefreshList#0;class#Controller#0" />
@@ -463,11 +553,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>JavaFXApp</last-edited>
+          <last-edited>SE_Project_Software:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

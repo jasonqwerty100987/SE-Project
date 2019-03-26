@@ -24,17 +24,19 @@
       <menus>
         <Menu mnemonicParsing="false" text="Cars">
           <items>
-            <MenuItem mnemonicParsing="false" text="Add New Car" />
+                  <MenuItem mnemonicParsing="false" onAction="#addCar" text="Add New Car" />
+            <MenuItem mnemonicParsing="false" onAction="#deleteCar" text="Delete Car" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="List">
           <items>
-            <MenuItem mnemonicParsing="false" text="Change Car Info" />
+            <MenuItem mnemonicParsing="false" onAction="#changeCar" text="Change Car Info" />
+                  <MenuItem mnemonicParsing="false" onAction="#changeKey" text="Change Key" />
           </items>
         </Menu>
         <Menu mnemonicParsing="false" text="About">
           <items>
-            <MenuItem mnemonicParsing="false" text="About Inspire Parking" />
+            <MenuItem mnemonicParsing="false" onAction="#About" text="About Inspire Parking" />
           </items>
         </Menu>
       </menus>

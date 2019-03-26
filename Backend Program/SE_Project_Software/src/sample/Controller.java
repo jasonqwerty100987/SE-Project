@@ -2,6 +2,13 @@ package sample;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.jfoenix.controls.JFXComboBox;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
 import com.mysql.cj.protocol.Resultset;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -23,12 +30,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.scene.control.Button;
 
+import javax.net.ssl.HttpsURLConnection;
 import javax.swing.tree.AbstractLayoutCache;
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
+import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -40,6 +45,8 @@ import java.util.Base64;
 import java.util.Vector;
 
 public class Controller {
+
+    private static String SK = "sk_aeaf16bdbe49c343c5404ae2";
 
     public class cars{
         private int carId;
@@ -140,6 +147,12 @@ public class Controller {
     @FXML
     private com.jfoenix.controls.JFXButton CloseButton;
 
+    @FXML
+    private javafx.scene.control.Button currentTime;
+
+    @FXML
+    private javafx.scene.control.Button changeNow;
+
     // Password input instance on login window
     @FXML
     private com.jfoenix.controls.JFXPasswordField PasswordField;
@@ -150,17 +163,21 @@ public class Controller {
 
     // Refresh button on main window
     @FXML
-    private javafx.scene.control.Button Refresh_list_button;
+    private  javafx.scene.control.Button Refresh_list_button;
 
-    // Car list on main window
     @FXML
-    private javafx.scene.control.TableView<cars> Car_list;
+    private javafx.scene.control.Button deleteButton;
+
+    @FXML
+    private javafx.scene.control.Button changeKeyNow;
+
 
     @FXML // CLose window method
     private void handleButtonClick() {
         Stage stage = (Stage) CloseButton.getScene().getWindow();
         stage.close();
     }
+
 
     @FXML // Login validate info method
     private void validateInfo() throws Exception{
@@ -192,13 +209,14 @@ public class Controller {
                 Stage stage = (Stage) CloseButton.getScene().getWindow();
                 stage.close();
                 Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
-                Stage Main = new Stage();
-                Main.setTitle("Inspire Parking Management Software. Welcome " + Userinput);
-                Main.setScene(new Scene(root));
-                Main.show();
-                Label rightStatus = (Label)Main.getScene().lookup("#rightStatus");
+                Stage main = new Stage();
+                main.setTitle("Inspire Parking Management Software. Welcome " + Userinput);
+                main.setScene(new Scene(root));
+                main.show();
+                Label rightStatus = (Label)main.getScene().lookup("#rightStatus");
                 rightStatus.setText(Userinput);
-                refresh_list(Main,true);
+                refresh_list(main,true);
+                Main.setPrimaryStage(main);
             }else{
                 AlertBox.display("Login Fail", "System cannot identity a user with the credential you entered \n           please check and try again");
             }
@@ -234,16 +252,15 @@ public class Controller {
                 tableView.getItems().add(car);
                 ++rowCount;
             }
-
+            Label leftStatus = (Label) stage.getScene().lookup("#leftStatus");
+            leftStatus.setText("Number of cars in list: " + rowCount);
             if(firstTime) {
-                Label leftStatus = (Label) stage.getScene().lookup("#leftStatus");
                 Label carColorDetail = (Label) stage.getScene().lookup("#carColorDetail");
                 Label carMakeDetail = (Label) stage.getScene().lookup("#carMakeDetail");
                 Label carModelDetail = (Label) stage.getScene().lookup("#carModelDetail");
                 Label carPlateDetail = (Label) stage.getScene().lookup("#carPlateDetail");
                 Label timeDurationDetail = (Label) stage.getScene().lookup("#timeDurationDetail");
                 ImageView carPhotoDetail = (ImageView) stage.getScene().lookup("#carPhotoDetail");
-                leftStatus.setText("Number of cars in list: " + rowCount);
                 tableView.getSelectionModel().selectedItemProperty().addListener((v, oldValue, newValue) -> {
                     cars car = (cars) newValue;
                     if(car == null){
@@ -268,6 +285,161 @@ public class Controller {
         }catch (SQLException ex){
             ex.printStackTrace();
         }
+    }
+
+    @FXML
+    private void addCar() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("addCar.fxml"));
+        Stage main = new Stage();
+        main.setTitle("Add A New Car");
+        main.setScene(new Scene(root));
+        main.show();
+    }
+
+    @FXML
+    private void deleteCar() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("deleteNow.fxml"));
+        Stage main = new Stage();
+        main.setTitle("");
+        main.setScene(new Scene(root));
+        main.show();
+    }
+
+    @FXML
+    private void changeCar() throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("changeCar.fxml"));
+        Stage main = new Stage();
+        main.setTitle("Change A Car Information");
+        main.setScene(new Scene(root));
+        JFXComboBox jfxComboBox = (JFXComboBox)main.getScene().lookup("#changeSelection");
+        jfxComboBox.getItems().addAll("Car_make","Car_model","Car_color", "CarPlate", "time_begin", "time_end");
+        main.show();
+    }
+
+    @FXML
+    private void changeKey()throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("changeKey.fxml"));
+        Stage main = new Stage();
+        main.setScene(new Scene(root));
+        Label label = (Label) main.getScene().lookup("#secretKey");
+        label.setText(SK);
+        main.setTitle("Change Car Reader API Key. Current Secret Key is: " + SK);
+        main.show();
+    }
+
+    @FXML
+    private void changeKeyNow1(){
+        JFXTextField jfxTextField = (JFXTextField)changeKeyNow.getScene().lookup("#newSK");
+        if(jfxTextField.getText().isEmpty()){
+            AlertBox.display("Error","Please enter a key");
+            return;
+        }
+        SK = jfxTextField.getText();
+        Stage window = (Stage)changeKeyNow.getScene().getWindow();
+        window.close();
+    }
+
+    @FXML
+    private void deleteNow()throws Exception{
+        JFXTextField jfxTextField = (JFXTextField)deleteButton.getScene().lookup("#keyField");
+        if(jfxTextField.getText().isEmpty()){
+            AlertBox.display("Error","Please enter a ID");
+        }
+        int ID = Integer.parseInt(jfxTextField.getText());
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/Vneao4rF2A", "Vneao4rF2A", "r1Futn7r47");
+        Statement stmt = conn.createStatement();
+        String query = "DELETE FROM cars WHERE ID = " + ID;
+        stmt.executeUpdate(query);
+        Stage stage = (Stage) deleteButton.getScene().getWindow();
+        stage.close();
+        RefreshList();
+    }
+
+    @FXML
+    private void useCurrentTime() throws Exception{
+        Integer time = LocalDateTime.now().getSecond() + LocalDateTime.now().getMinute()*100 + LocalDateTime.now().getHour()*10000;
+        JFXTextField jfxTextField = (JFXTextField)currentTime.getScene().lookup("#timeBegin");
+        jfxTextField.setText(time.toString());
+    }
+
+    @FXML
+    private void changeNowInfo() throws Exception{
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/Vneao4rF2A", "Vneao4rF2A", "r1Futn7r47");
+        Statement stmt = conn.createStatement();
+        JFXComboBox keyValue = (JFXComboBox)changeNow.getScene().lookup("#changeSelection") ;
+        JFXTextField recordID = (JFXTextField)changeNow.getScene().lookup("#recordID");
+        JFXTextField newValueText = (JFXTextField)changeNow.getScene().lookup("#newInfo");
+        keyValue.getSelectionModel().isSelected(0);
+        if(recordID.getText().isEmpty()){
+            AlertBox.display("Error","Please enter a ID");
+            return;
+        }
+        if(newValueText.getText().isEmpty()){
+            AlertBox.display("Error","Please enter a new value");
+            return;
+        }
+        if(keyValue.getSelectionModel().getSelectedItem().toString() == "time_begin" || keyValue.getSelectionModel().getSelectedItem().toString() == "time_end"){
+            int ID = Integer.parseInt(recordID.getText());
+            String Key = keyValue.getSelectionModel().getSelectedItem().toString();
+            int newValue = Integer.parseInt(newValueText.getText());
+            String query = String.format("UPDATE cars SET %s = '%s' WHERE ID = %s",Key,newValue,ID);
+            stmt.executeUpdate(query);
+            RefreshList();
+        }else{
+            int ID = Integer.parseInt(recordID.getText());
+            String Key = keyValue.getSelectionModel().getSelectedItem().toString();
+            String newValue = newValueText.getText();
+            String query = String.format("UPDATE cars SET %s = '%s' WHERE cars.ID = %s",Key,newValue,ID);
+            System.out.println(query);
+            stmt.executeUpdate(query);
+            RefreshList();
+        }
+        Stage stage = (Stage) keyValue.getScene().getWindow();
+        stage.close();
+
+    }
+
+    @FXML
+    private void addNowFunction() throws Exception{
+        Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/Vneao4rF2A", "Vneao4rF2A", "r1Futn7r47");
+        Statement stmt = conn.createStatement();
+        String query = "SELECT count(*) as total FROM cars;";
+        ResultSet rset = stmt.executeQuery(query);
+        rset.next();
+        int ID = rset.getInt("total") + 1;
+        JFXTextField timeBeginText = (JFXTextField)currentTime.getScene().lookup("#timeBegin");
+        JFXTextField carMakeText = (JFXTextField)currentTime.getScene().lookup("#carMake");
+        JFXTextField carModelText = (JFXTextField)currentTime.getScene().lookup("#carModel");
+        JFXTextField carColorText = (JFXTextField)currentTime.getScene().lookup("#carColor");
+        JFXTextField carPlateText = (JFXTextField)currentTime.getScene().lookup("#carPlate");
+        JFXTextField timeEndText = (JFXTextField)currentTime.getScene().lookup("#timeEnd");
+        String carMake,carModel,color,plate;
+        int timeBegin,timeEnd;
+        if(timeBeginText.getText().isEmpty() || carMakeText.getText().isEmpty() || carModelText.getText().isEmpty() || carColorText.getText().isEmpty() || carPlateText.getText().isEmpty()){
+            AlertBox.display("Error", "Please enter all required information");
+            return;
+        }
+        timeBegin = Integer.parseInt(timeBeginText.getText());
+        carMake = carMakeText.getText();
+        carModel = carModelText.getText();
+        color = carColorText.getText();
+        plate = carPlateText.getText();
+        if(timeEndText.getText().isEmpty()){
+            timeEnd = 0;
+        }else{
+            timeEnd = Integer.parseInt(timeEndText.getText());
+        }
+        String strSelect = String.format("insert into cars values (%s,'%s','%s','%s','%s',%s,%s);",ID, carMake,carModel, color, plate,timeBegin,timeEnd);
+        stmt.executeUpdate(strSelect);
+        Stage stage = (Stage) timeBeginText.getScene().getWindow();
+        stage.close();
+        RefreshList();
+    }
+
+    @FXML
+    private void About() throws Exception{
+        URI uri = new URI("https://inspark2019.000webhostapp.com/v2/");
+        java.awt.Desktop.getDesktop().browse(uri);
     }
 
     private String timeFormate(int time){
@@ -314,9 +486,14 @@ public class Controller {
     }
 
     private String timeDuration(cars car){
+        int timeEnd = car.getTimeEnd();
+        String temp = "No exit record";
+        if(timeEnd == 0){
+            return temp;
+        }
         Integer second=0, minite=0,hour=0;
         int timeBegin = car.getTimeBegin();
-        int timeEnd = car.getTimeEnd();
+
         double a,b;
         String ssecond,sminite,shour;
         Integer[] result = new Integer[3];
@@ -343,7 +520,7 @@ public class Controller {
         minite = result[1];
         hour = result[2];
 
-        if(minite > 60){
+        while(minite > 60){
             minite -= 60;
             hour += 1;
         }
@@ -357,7 +534,7 @@ public class Controller {
 
     @FXML // refresh cars list method with no parameter
     private void RefreshList(){
-        Stage window = (Stage) Refresh_list_button.getScene().getWindow();
+        Stage window = Main.getPrimaryStage();
         refresh_list(window,false);
     }
 
@@ -371,13 +548,16 @@ public class Controller {
             ResultSet rset = stmt.executeQuery(query);
             rset.next();
             int ID = rset.getInt("total") + 1;
-            String secret_key = "sk_aeaf16bdbe49c343c5404ae2";
+            String secret_key = SK;
 
             // Read image file to byte array
             System.out.println(ID);
-            Path path = Paths.get("D:\\SE_Project_Software\\src\\sample\\carPhoto\\" + "5" + ".png");
+            Image image = new Image(getClass().getResource("./carPhoto/" + ID + ".png").toExternalForm());
+            String path = image.getUrl();
+            path = path.substring(6);
+            Path realPath = Paths.get(path);
             // image file location : need to be revised
-            byte[] data = Files.readAllBytes(path);
+            byte[] data = Files.readAllBytes(realPath);
 
             // Encode file bytes to base64
             byte[] encoded = Base64.getEncoder().encode(data);
@@ -421,7 +601,7 @@ public class Controller {
                 Label carModelProceed = (Label) stage.getScene().lookup("#carModelProceed");
                 Label carPlateProceed = (Label) stage.getScene().lookup("#carPlateProceed");
                 Label carRegionProceed = (Label) stage.getScene().lookup("#carRegionProceed");
-                Image image = new Image(getClass().getResource("./carPhoto/" + 5 + ".png").toExternalForm());
+
                 ImageView imageView = (ImageView) stage.getScene().lookup("#carPhotoProceed") ;
                 imageView.setImage(image);
                 carColorProceed.setText(color);
@@ -431,9 +611,26 @@ public class Controller {
                 carRegionProceed.setText(region);
 
                 int timeBegin = LocalDateTime.now().getSecond() + LocalDateTime.now().getMinute()*100 + LocalDateTime.now().getHour()*10000;
-                String strSelect = String.format("insert into cars values (%s,'%s','%s','%s','%s',%s,null);",ID, carMake,carModel, color, plate,timeBegin);
+                String strSelect = String.format("insert into cars values (%s,'%s','%s','%s','%s',%s,0);",ID, carMake,carModel, color, plate,timeBegin);
                 stmt.executeUpdate(strSelect);
                 RefreshList();
+
+                /*StringBuilder tokenUri=new StringBuilder("activity=");
+                tokenUri.append(URLEncoder.encode("enter","UTF-8"));
+                tokenUri.append("&lpnum=");
+                tokenUri.append(URLEncoder.encode(plate,"UTF-8"));
+
+                String url1 = "https://inspark2019.000webhostapp.com/v2/traffic.php?";
+                URL obj = new URL(url1);
+                HttpsURLConnection con1 = (HttpsURLConnection) obj.openConnection();
+
+                con1.setRequestMethod("POST");
+
+                con1.setDoOutput(true);
+                OutputStreamWriter outputStreamWriter = new OutputStreamWriter(con.getOutputStream());
+                outputStreamWriter.write(tokenUri.toString());
+                outputStreamWriter.flush();
+                */
             }
             else
             {
@@ -448,7 +645,7 @@ public class Controller {
         }
         catch (IOException e)
         {
-            AlertBox.display("Error","There is a problem with your key.");
+            AlertBox.display("Error","There is a problem with picture.");
         }
     }
 
