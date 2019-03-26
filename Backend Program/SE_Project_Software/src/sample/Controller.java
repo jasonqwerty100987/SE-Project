@@ -367,6 +367,7 @@ public class Controller {
         stmt.executeUpdate(query);
         Stage stage = (Stage) deleteButton.getScene().getWindow();
         stage.close();
+      //  updateID();
         RefreshList();
     }
 
@@ -686,6 +687,8 @@ public class Controller {
         return region;
     }
 
+    
+    
     private static String getColor(String json_content) {
         JSONObject jsonObj = JSON.parseObject(json_content);
         JSONArray result = jsonObj.getJSONArray("results");

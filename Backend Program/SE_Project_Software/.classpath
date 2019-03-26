@@ -11,9 +11,6 @@
 	<classpathentry kind="lib" path="lib/json-lib-2.1-jdk15.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.15.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_202/jre/lib/jfxswt.jar"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip"/>
-	<classpathentry kind="lib" path="C:/Program Files/Java/jdk1.8.0_202/jre/lib/ext/jfxrt.jar"/>
-	<classpathentry kind="lib" path="D:/SE_Project_Software/lib/jfoenix-8.0.8.jar"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/jfoenix-8.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
