@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/fastjson-1.2.56.jar"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/jfoenix-8.0.2.jar"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/jfoenix-9.0.8.jar"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/mysql-connector-java-8.0.15.jar"/>
+	<classpathentry kind="lib" path="/Users/shijiexu/Documents/GitHub/SE-Project/ALPR/libs/mysql-socket-factory-1.0.12-jar-with-dependencies.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
