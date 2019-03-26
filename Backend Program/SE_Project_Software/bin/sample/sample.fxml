@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="login" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="605.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/zac-ong-383094-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="670.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Resources/logo.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="UsernameField" layoutX="687.0" layoutY="177.0" prefHeight="23.0" prefWidth="209.0" promptText="Username" />
+      <JFXPasswordField fx:id="PasswordField" layoutX="687.0" layoutY="228.0" prefHeight="23.0" prefWidth="209.0" promptText="Password" />
+      <JFXButton fx:id="LogButton" layoutX="841.0" layoutY="295.0" onAction="#validateInfo" prefHeight="23.0" prefWidth="59.0" style="-fx-background-color: #4A4747;" text="Log In" textFill="WHITE" />
+      <JFXButton fx:id="CloseButton" alignment="CENTER" layoutX="934.0" layoutY="-3.0" onAction="#handleButtonClick" text="X">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</Pane>

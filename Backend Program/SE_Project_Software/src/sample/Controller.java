@@ -37,6 +37,7 @@ import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.security.CodeSource;
 import java.security.MessageDigest;
 import java.security.SecureClassLoader;
 import java.sql.*;
@@ -47,7 +48,20 @@ import java.util.Vector;
 public class Controller {
 
     private static String SK = "sk_aeaf16bdbe49c343c5404ae2";
+    public class Image extends javafx.scene.image.Image{
 
+        String url;
+
+        public Image(String url) {
+            super(url);
+            this.url = url;
+        }
+
+        public String geturl() {
+            return url;
+        }
+
+    }
     public class cars{
         private int carId;
         private String carMake;
@@ -271,7 +285,8 @@ public class Controller {
                         carPlateDetail.setText("No Selection");
                         timeDurationDetail.setText("No Selection");
                     }else {
-                        Image image = new Image(getClass().getResource("./carPhoto/" + car.getCarId() + ".png").toExternalForm());
+                    	String directory = System.getProperty("user.dir");
+                        Image image = new Image("file:/" + directory + "/carPhoto/" + car.getCarId() + ".png");
                         carColorDetail.setText(car.getCarColor());
                         carMakeDetail.setText(car.getCarMake());
                         carModelDetail.setText(car.getCarModel());
@@ -551,9 +566,9 @@ public class Controller {
             String secret_key = SK;
 
             // Read image file to byte array
-            System.out.println(ID);
-            Image image = new Image(getClass().getResource("./carPhoto/" + ID + ".png").toExternalForm());
-            String path = image.getUrl();
+            String directory = System.getProperty("user.dir");
+            Image image = new Image("file:/" + directory + "/carPhoto/" + ID + ".png");
+            String path = image.geturl();
             path = path.substring(6);
             Path realPath = Paths.get(path);
             // image file location : need to be revised

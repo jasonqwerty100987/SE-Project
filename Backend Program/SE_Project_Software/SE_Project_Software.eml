@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" jdk="11" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/out/test/SE_Project_Software"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="commons-beanutils-1.7.0.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-beanutils-1.7.0.jar!/"/>
+	</lib>
+	<lib name="commons-collections-3.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-collections-3.1.jar!/"/>
+	</lib>
+	<lib name="commons-lang-2.5.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-lang-2.5.jar!/"/>
+	</lib>
+	<lib name="commons-logging.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/commons-logging.jar!/"/>
+	</lib>
+	<lib name="ezmorph-1.0.3.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/ezmorph-1.0.3.jar!/"/>
+	</lib>
+	<lib name="fastjson-1.2.56.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/fastjson-1.2.56.jar!/"/>
+	</lib>
+	<lib name="java-json.jar" scope="COMPILE">
+		<srcroot url="jar://$MODULE_DIR$/lib/java-json.jar!/"/>
+		<relative-module-src project-related="jar://$PROJECT_DIR$/lib/java-json.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/java-json.jar!/"/>
+	</lib>
+	<lib name="jfoenix-9.0.8.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jfoenix-9.0.8.jar!/"/>
+	</lib>
+	<lib name="json-lib-2.1-jdk15.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/json-lib-2.1-jdk15.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-8.0.15.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.15.jar!/"/>
+	</lib>
+	<levels>
+		<level name="javafx-swt" value="project"/>
+	</levels>
+</component>
