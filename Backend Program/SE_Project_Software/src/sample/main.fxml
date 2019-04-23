@@ -30,6 +30,7 @@
         </Menu>
         <Menu mnemonicParsing="false" text="List">
           <items>
+                  <MenuItem mnemonicParsing="false" onAction="#changeRate" text="Change Rate" />
             <MenuItem mnemonicParsing="false" onAction="#changeCar" text="Change Car Info" />
                   <MenuItem mnemonicParsing="false" onAction="#changeKey" text="Change Key" />
           </items>

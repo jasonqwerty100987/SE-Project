@@ -34,6 +34,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.swing.tree.AbstractLayoutCache;
 import java.io.*;
 import java.net.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -184,6 +185,10 @@ public class Controller {
 
     @FXML
     private javafx.scene.control.Button changeKeyNow;
+    @FXML
+    private javafx.scene.control.Button changeRateButton;
+    @FXML
+    private com.jfoenix.controls.JFXTextField rateField;
 
 
     @FXML // CLose window method
@@ -286,7 +291,7 @@ public class Controller {
                         timeDurationDetail.setText("No Selection");
                     }else {
                     	String directory = System.getProperty("user.dir");
-                        Image image = new Image("file:/" + directory + "/carPhoto/" + car.getCarId() + ".png");
+                        Image image = new Image(directory + "/carPhoto/" + car.getCarId() + ".png");
                         carColorDetail.setText(car.getCarColor());
                         carMakeDetail.setText(car.getCarMake());
                         carModelDetail.setText(car.getCarModel());
@@ -341,7 +346,84 @@ public class Controller {
         main.setTitle("Change Car Reader API Key. Current Secret Key is: " + SK);
         main.show();
     }
-
+    @FXML void changeRate() throws Exception{
+    	Parent root = FXMLLoader.load(getClass().getResource("changeRate.fxml"));
+    	Stage changeRateStage = new Stage();
+    	changeRateStage.setScene(new Scene(root));
+    	changeRateStage.show();
+    }
+    @FXML
+    private void changeRateNow() throws Exception{
+    	String inputRate = rateField.getText();
+    	HttpURLConnection url = getURLConnection(
+    			"https://inspark2019.000webhostapp.com/v2/php/lotmanager.php"+
+    		    "?op=set_rate&name=Hypothetical Parking Lot 2B&rate="+inputRate,"POST");
+    	System.out.println(url.getResponseCode());
+    	System.out.println(getURLConnectionOutput(url));
+    	
+    	
+    }
+    
+    private String getURLConnectionOutput(HttpURLConnection urlc) {
+    	  StringBuilder str = new StringBuilder();
+    	  try {
+    	    BufferedReader in = new BufferedReader(
+    	      new InputStreamReader(
+    	      urlc.getInputStream(),"UTF-8"));
+    	    for(int c;(c=in.read())>=0;) {
+    	      str.append((char)c);
+    	    }
+    	    in.close();
+    	  } catch(Exception e) {
+    	    e.printStackTrace();
+    	  }
+    	  return str.toString();
+    	}
+    private HttpURLConnection getURLConnection(String url, String type) throws Exception {
+    	  
+    	  String agent =
+    	    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "+
+    	    "AppleWebKit/537.36 (KHTML, like Gecko) "+
+    	    "Chrome/70.0.3538.102 Safari/537.36";
+    	    
+    	  if(type.equals("POST")) {
+    	    
+    	    //println("POST request detected!");
+    	    //println("given url is: "+url);
+    	    
+    	    int param_index = url.lastIndexOf("?");
+    	    String params = "";
+    	    if(param_index!=-1) {
+    	      params = url.substring(param_index+1);
+    	      url = url.substring(0,param_index);
+    	    }
+    	    byte[] data = params.getBytes(StandardCharsets.UTF_8);
+    	    
+    	    //println("trimmed url is: "+url);
+    	    //println("parameter text is: "+params);
+    	    
+    	    HttpURLConnection urlc = (HttpURLConnection)new URL(url).openConnection();
+    	    urlc.setDoOutput(true);
+    	    urlc.setInstanceFollowRedirects(false);
+    	    urlc.setRequestMethod("POST");
+    	    urlc.setRequestProperty("user-agent",agent);
+    	    urlc.setRequestProperty("Content-Type","application/x-www-form-urlencoded");
+    	    urlc.setRequestProperty("charset","utf-8");
+    	    urlc.setRequestProperty("Content-Length",Integer.toString(data.length));
+    	    urlc.setUseCaches(false);
+    	    urlc.getOutputStream().write(data);
+    	    
+    	    return urlc;
+    	  } else if(type.equals("GET")) {
+    	    
+    	    HttpURLConnection urlc = (HttpURLConnection)new URL(url).openConnection();
+    	    urlc.setRequestMethod("GET");
+    	    urlc.setRequestProperty("user-agent",agent);
+    	    
+    	    return urlc;
+    	  }
+    	  throw new Exception("only POST and GET allowed");
+    	}
     @FXML
     private void changeKeyNow1(){
         JFXTextField jfxTextField = (JFXTextField)changeKeyNow.getScene().lookup("#newSK");
@@ -367,7 +449,7 @@ public class Controller {
         stmt.executeUpdate(query);
         Stage stage = (Stage) deleteButton.getScene().getWindow();
         stage.close();
-      //  updateID();
+
         RefreshList();
     }
 
