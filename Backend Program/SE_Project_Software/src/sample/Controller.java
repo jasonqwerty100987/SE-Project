@@ -203,7 +203,7 @@ public class Controller {
         try {
             String Userinput = UsernameField.getText();
             String Userpd = sha256(PasswordField.getText());
-            Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/lwmU9Ib3M7", "lwmU9Ib3M7", "cnTrfKQqso");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://remotemysql.com:3306/t75K9YqGJ6", "t75K9YqGJ6", "TGFCdJIG2D");
             Statement stmt = conn.createStatement();
             String strSelect = String.format("select username, passwd from users where username='%s' and passwd='%s';",Userinput,Userpd);
             ResultSet rset = stmt.executeQuery(strSelect);
